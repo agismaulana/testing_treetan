@@ -1,0 +1,256 @@
+{
+	"info": {
+		"_postman_id": "0c0d48e7-bbd3-4ec5-96d1-6740b20f6610",
+		"name": "testing_treetan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8000/api/user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"console.log('fetching identity token')\r",
+							"pm.test(\"status code is 200\", function() {\r",
+							"    pm.response.to.have.status(200);\r",
+							"})\r",
+							"\r",
+							"var x = JSON.parse(responseBody)\r",
+							"console.log(\"identity Token Is\")\r",
+							"console.log(x.accessToken)\r",
+							"postman.setEnvironmentVariable(\"scm_token\", x.accessToken)\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/user/1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"console.log('fetching identity token')\r",
+							"pm.test(\"status code is 200\", function() {\r",
+							"    pm.response.to.have.status(200);\r",
+							"})\r",
+							"\r",
+							"var x = JSON.parse(responseBody)\r",
+							"console.log(\"identity Token Is\")\r",
+							"console.log(x.accessToken)\r",
+							"postman.setEnvironmentVariable(\"scm_token\", x.accessToken)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/user/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/user/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"console.log('fetching identity token')\r",
+							"pm.test(\"status code is 302\", function() {\r",
+							"    pm.response.to.have.status(302);\r",
+							"})\r",
+							"\r",
+							"var x = JSON.parse(responseBody)\r",
+							"console.log(\"identity Token Is\")\r",
+							"console.log(x.accessToken)\r",
+							"postman.setEnvironmentVariable(\"scm_token\", x.accessToken)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Agis Maulana",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "agismaulana112@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "agis123",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/user/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/user/11?_method=PUT",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"console.log('fetching identity token')\r",
+							"pm.test(\"status code is 200\", function() {\r",
+							"    pm.response.to.have.status(200);\r",
+							"})\r",
+							"\r",
+							"var x = JSON.parse(responseBody)\r",
+							"console.log(\"identity Token Is\")\r",
+							"console.log(x.accessToken)\r",
+							"postman.setEnvironmentVariable(\"scm_token\", x.accessToken)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Agis Maulana",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "agismaulana112@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "agis123",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/user/11?_method=PUT",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"11"
+					],
+					"query": [
+						{
+							"key": "_method",
+							"value": "PUT"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/user/11",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"console.log('fetching identity token')\r",
+							"pm.test(\"status code is 200\", function() {\r",
+							"    pm.response.to.have.status(200);\r",
+							"})\r",
+							"\r",
+							"var x = JSON.parse(responseBody)\r",
+							"console.log(\"identity Token Is\")\r",
+							"console.log(x.accessToken)\r",
+							"postman.setEnvironmentVariable(\"scm_token\", x.accessToken)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/user/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"11"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
